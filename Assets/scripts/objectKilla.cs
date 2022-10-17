@@ -10,7 +10,7 @@ public class objectKilla : MonoBehaviour
     private void update()
     {
 
-         Destroy(gameObject, wait);
+         Destroy(this, wait);
 
 
     }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8125253464565055077}
   - component: {fileID: 1316760297224026840}
   - component: {fileID: 7060908597394772183}
-  - component: {fileID: 2829935389798969328}
+  - component: {fileID: 4676422214499069260}
   m_Layer: 0
   m_Name: Log
   m_TagString: Untagged
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
---- !u!114 &2829935389798969328
+--- !u!114 &4676422214499069260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,10 +122,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1804130634601311861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b0e2ed66fa1bbf4d8b0aee8cab15cbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c6fba01ecaa65440bdca25372f5dae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wait: 4
 --- !u!1 &4228165061110811051
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +138,7 @@ GameObject:
   - component: {fileID: 6685638437242668089}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Delog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

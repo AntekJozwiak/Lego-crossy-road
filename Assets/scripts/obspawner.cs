@@ -22,7 +22,6 @@ public class obspawner : MonoBehaviour
         {
             if (r) Instantiate(objcts[Random.Range(0, objcts.Length)], new Vector3(Random.Range(left.position.x, right.position.x), right.position.y, right.position.z), right.transform.rotation);
             else Instantiate(objcts[Random.Range(0, objcts.Length)], new Vector3(Random.Range(left.position.x, right.position.x), right.position.y, right.position.z), left.transform.rotation);
-            Debug.Log("myballs");
             i++;
         }
         StartCoroutine(loop());

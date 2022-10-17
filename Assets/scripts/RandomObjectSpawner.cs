@@ -15,10 +15,10 @@ public class RandomObjectSpawner : MonoBehaviour
     IEnumerator EnemyDrop()
     {
         int spawnCount = 0;
-        while (spawnCount < 10)
+        while (spawnCount < 5)
         {
             int xPos = Random.Range(-15, 15);
-            GameObject newObj = Instantiate(Objects[Random.Range(0, Objects.Length)], new Vector3(transform.position.x + 0.5f +  xPos, transform.position.y + 1, transform.position.z), Quaternion.identity);
+            GameObject newObj = Instantiate(Objects[Random.Range(0, Objects.Length)], new Vector3(transform.position.x +  xPos, transform.position.y + 1, transform.position.z), Quaternion.identity);
             newObj.transform.SetParent(terrainHolder.transform);
             yield return new WaitForSeconds(0.1f);
             spawnCount += 1;
