@@ -8,48 +8,67 @@ public class crossyroadmovement : MonoBehaviour
     float mspeed;
     [SerializeField]
     float rspeed;
+    [SerializeField]
+    private Animator anim;
+    [SerializeField]
+    private string[] blockedobjects;
+
     void Start()
     {
-        //transform.position = new Vector3(transform.position.x -.5f, transform.position.y, transform.position.z);
+
     }
-    public LayerMask acid;
     public bool moving;
     Vector3 moveto;
     Quaternion rotateto;
     public GameObject terraingen;
+
     void Update()
     {
         RaycastHit hit;
-        if(Physics.Raycast(transform.position,-transform.up, out hit))
+        if (Physics.Raycast(transform.position, -transform.up, out hit))
         {
             transform.parent = hit.transform;
         }
         if (!moving)
         {
-            if (Input.GetKeyDown("w") || Input.GetKeyDown("up"))
+            foreach (string i in blockedobjects)
             {
+                if (i + "(Clone)" == hit.transform.name)
+                {
+                 // die();
+                    if (hit.transform.name == "water(Clone)") anim.Play("drown");
+                }
+            }
+
+            if (Input.GetKeyDown("w"))
+            {
+
                 moveto = transform.position + new Vector3(0, 0, 1);
                 rotateto = Quaternion.Euler(0, 0, 0);
                 moving = true;
                 terraingen.GetComponent<TerrainGenerator>().SpawnTerrain(false);
+                anim.Play("jump");
             }
-            else if (Input.GetKeyDown("s") || Input.GetKeyDown("down"))
+            else if (Input.GetKeyDown("s"))
             {
                 moveto = transform.position - new Vector3(0, 0, 1);
                 rotateto = Quaternion.Euler(0, 180, 0);
                 moving = true;
+                anim.Play("jump");
             }
-            else if (Input.GetKeyDown("d") || Input.GetKeyDown("right"))
+            else if (Input.GetKeyDown("d"))
             {
                 moveto = transform.position + new Vector3(1, 0, 0);
                 rotateto = Quaternion.Euler(0, 90, 0);
                 moving = true;
+                anim.Play("jump");
             }
-            else if (Input.GetKeyDown("a") || Input.GetKeyDown("left"))
+            else if (Input.GetKeyDown("a"))
             {
-                moveto = transform.position - new Vector3(1,0,0);
+                moveto = transform.position - new Vector3(1, 0, 0);
                 rotateto = Quaternion.Euler(0, -90, 0);
                 moving = true;
+                anim.Play("jump");
             }
         }
         else
@@ -62,15 +81,15 @@ public class crossyroadmovement : MonoBehaviour
             {
                 moving = false;
             }
-            
-        }
-        RaycastHit hitInfo;
-        if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, Mathf.Infinity, acid))
-        {
-            Debug.DrawRay(transform.position, -transform.up);
-        }
 
-
+        }
     }
-
+    /*
+    public void die()
+    {
+        GameObject deadobj = GameObject.FindGameObjectWithTag("deadobj");
+        deadobj.GetComponent<deadobject>().dead = true;
+        this.enabled = false;
+    }
+    */
 }
