@@ -218,7 +218,7 @@ MonoBehaviour:
   left: {fileID: 4359645222715141864}
   right: {fileID: 7324038784043176969}
   objcts:
-  - {fileID: 1804130634601311861, guid: 8f8293558c1a0164280fdf9b3fb343c1, type: 3}
+  - {fileID: 4822198738045222413, guid: e7b36d313611aa241a01280b9272635f, type: 3}
   timerange: {x: 3, y: 7}
   r: 0
   amountprerange: {x: 2, y: 5}

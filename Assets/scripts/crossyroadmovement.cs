@@ -40,7 +40,7 @@ public class crossyroadmovement : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown("w"))
+            if (Input.GetKeyDown("w") || Input.GetKeyDown("up"))
             {
 
                 moveto = transform.position + new Vector3(0, 0, 1);
@@ -49,21 +49,21 @@ public class crossyroadmovement : MonoBehaviour
                 terraingen.GetComponent<TerrainGenerator>().SpawnTerrain(false);
                 anim.Play("jump");
             }
-            else if (Input.GetKeyDown("s"))
+            else if (Input.GetKeyDown("s") || Input.GetKeyDown("down"))
             {
                 moveto = transform.position - new Vector3(0, 0, 1);
                 rotateto = Quaternion.Euler(0, 180, 0);
                 moving = true;
                 anim.Play("jump");
             }
-            else if (Input.GetKeyDown("d"))
+            else if (Input.GetKeyDown("d") || Input.GetKeyDown("right"))
             {
                 moveto = transform.position + new Vector3(1, 0, 0);
                 rotateto = Quaternion.Euler(0, 90, 0);
                 moving = true;
                 anim.Play("jump");
             }
-            else if (Input.GetKeyDown("a"))
+            else if (Input.GetKeyDown("a") || Input.GetKeyDown("left"))
             {
                 moveto = transform.position - new Vector3(1, 0, 0);
                 rotateto = Quaternion.Euler(0, -90, 0);

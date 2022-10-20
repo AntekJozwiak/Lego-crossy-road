@@ -97,9 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Objects:
+  - {fileID: 4050697009506498063, guid: e6eb7e29cb637e4408216d738764a390, type: 3}
   - {fileID: 5633074421916695546, guid: 2a771be7271772746bef98d17e21de0f, type: 3}
-  - {fileID: 5045029563879103118, guid: d37949bfa23cc974f9a520918b68e381, type: 3}
-  - {fileID: 4850646373725366837, guid: ff1eb1d8afcad6d4998df2d668476e01, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   terrainHolder: {fileID: 0}
 --- !u!1 &3059863064633965663
 GameObject:
