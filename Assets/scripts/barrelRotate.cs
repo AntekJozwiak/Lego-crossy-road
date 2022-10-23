@@ -12,6 +12,6 @@ public class barrelRotate : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(Vector3.right *  speed * Time.deltaTime);
+        transform.Rotate(new Vector3(0f, 0f * Time.deltaTime, 100f));
     }
 }

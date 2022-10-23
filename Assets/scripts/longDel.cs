@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class collisionKilla : MonoBehaviour
+public class longDel : MonoBehaviour
 {
     private void Awake()
     {
-        Destroy(this.gameObject, 15);
+        Destroy(this.gameObject, 40);
     }
 }
